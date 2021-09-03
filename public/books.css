@@ -10,10 +10,26 @@
     background-color: darkseagreen;
   }
 
+  h2{
+  padding: 30px;
+  }
 
   a{
   color: blue;
   font: bold;
+  }
+
+  form{
+border-style: solid;
+padding-top: 10px;
+padding-bottom: 25px;
+background-color: lightgrey;
+border-radius: 30px;
+  }
+
+  input{
+
+
   }
   
 
