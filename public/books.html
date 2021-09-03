@@ -28,10 +28,26 @@
     background-color: darkseagreen;
   }
 
+  h2{
+  padding: 30px;
+  }
 
   a{
   color: blue;
   font: bold;
+  }
+
+  form{
+border-style: solid;
+padding-top: 10px;
+padding-bottom: 25px;
+background-color: lightgrey;
+border-radius: 30px;
+  }
+
+  input{
+
+
   }
   
 
@@ -81,40 +97,88 @@ padding: 20px;
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
     </div>
   </div>
 </nav>
-  <h1><center> Meet Barack Obama<center> </h1>
-  <center><img src="https://celebrityinsider.org/wp-content/uploads/2019/07/Barack-Obama-Donald-Trump-White-House.jpg"></center>
+<center><h2> Obama's Favorite Books</h2></center>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th scope="col">Year Published</th>
+      <th scope="col">Publisher</th>
+      <th scope="col">Page Count</th>
+      <th scope="col">MSRP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>The Lightning Thief</td>
+      <td>Rick Riordan</td>
+      <td>2005</td>
+      <td>Rick Riordan</td>
+      <td>Rick Riordan</td>
+      <td>Rick Riordan</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>The Lightning Thief</td>
+      <td>Rick Riordan</td>
+      <td>2005</td>
+      <td>Rick Riordan</td>
+      <td>Rick Riordan</td>
+      <td>Rick Riordan</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>The Lightning Thief</td>
+      <td>Rick Riordan</td>
+      <td>2005</td>
+      <td>Rick Riordan</td>
+      <td>Rick Riordan</td>
+      <td>Rick Riordan</td>
+    </tr>
+       <tr>
+      <th scope="row">4</th>
+      <td>The Lightning Thief</td>
+      <td>Rick Riordan</td>
+      <td>2005</td>
+      <td>Rick Riordan</td>
+      <td>Rick Riordan</td>
+      <td>Rick Riordan</td>
+    </tr>
+       <tr>
+      <th scope="row">5</th>
+      <td>The Lightning Thief</td>
+      <td>Rick Riordan</td>
+      <td>2005</td>
+      <td>Rick Riordan</td>
+      <td>Rick Riordan</td>
+      <td>Rick Riordan</td>
+    </tr>
 
-  <div class = "description">
-  <hr>
+  </tbody>
+</table>
+
+<center><h2> Add More Book Details Below</h2></center>
+<form>
   <center>
-  <b><u>Born</b></u>: Parents are from Kenya, Africa. Born and Raised in 
-  Honolulu,Hawaii
-  <br>
-  <br>
-  <b><u>Birthdate</b></u>: August 4th, 1961
-  <br>
-  <br>
-  <b><u>Age</b></u>: 60 
-  <br>
-  <br>
-  <b><u>Email Address</b></u>: <a href="barackobama@gmail.com?subject=Business Inquiries">barackobama@gmail.com</a>
-  <br>
-  <br>
-  <b><u>Facts</u></b>: Barack Obama has served as a U.S Senator for the State of Illnois. In 2008, he was elected as the 44th President of the United States.
+  <label for="fname">Title:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Author:</label><br>
+  <input type="text" id="lname" name="lname"><br>
+  <label for="ypub">Year Published:</label><br>
+  <input type="text" id="ypub" name="ypub"><br>
+  <label for="lname">Publisher:</label><br>
+  <input type="text" id="pub" name="pub"><br>
+  <label for="fname">MSRP:</label><br>
+  <input type="pcount" id="pcount" name="pcount"><br>
 </center>
-  </div>
-
-
-
-
-  
+ 
+</form>
 </body>
 <!-- https://celebrityinsider.org/wp-content/uploads/2019/07/Barack-Obama-Donald-Trump-White-House.jpg -->
 </html>
