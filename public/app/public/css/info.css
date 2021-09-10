@@ -1,0 +1,50 @@
+<style>
+
+  img {
+  width: 600px;
+  border-radius: 10%;
+  border-style: ridge;
+}
+
+  nav{
+    background-color: darkseagreen;
+  }
+
+  h2{
+  padding: 30px;
+  }
+
+  a{
+  color: blue;
+  font: bold;
+  }
+
+  form{
+border-style: solid;
+padding-top: 10px;
+padding-bottom: 25px;
+background-color: lightgrey;
+border-radius: 30px;
+  }
+
+  input{
+
+
+  }
+  
+
+  body{
+  background-color: darkseagreen;
+  }
+
+  h1{
+  font: cursive;
+  padding: 50px;
+  }
+
+
+#description{
+background-color: darkseagreen;
+padding: 20px;
+}
+  </style>
