@@ -8,16 +8,6 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-    <script src='tablesort.min.js'></script>
-
-    <!-- Include sort types you need -->
-    <script src='tablesort.number.js'></script>
-    <script src='tablesort.date.js'></script>
-
-  <script>
-  new Tablesort(document.getElementById('table-id'));
-</script>
-
     <link rel="stylesheet" type="text/css" href="books.css" media=”screen” />
 
     <title>
@@ -99,7 +89,7 @@ padding: 20px;
   </div>
 </nav>
 <center><h2> Obama's Favorite Books</h2></center>
-<table class="table">
+<table id = "change_table" class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -179,6 +169,13 @@ padding: 20px;
 </center>
  
 </form>
+<!-- /*Tablesort Css Plugin from http://tristen.ca/tablesort/demo/
+*/ -->
+   <script src='js/tablesort.min.js'></script>
+
+  <script>
+  new Tablesort(document.getElementById('change_table'));
+</script>
 </body>
 <!-- https://celebrityinsider.org/wp-content/uploads/2019/07/Barack-Obama-Donald-Trump-White-House.jpg -->
 </html>
