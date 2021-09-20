@@ -104,6 +104,24 @@ padding: 20px;
   <b><u>Facts</u></b>: Barack Obama has served as a U.S Senator for the State of Illnois. In 2008, he was elected as the 44th President of the United States.
 </center>
   </div>
+ <div id="offerApp" class="col col-8">
+          <h1>Two of two columns</h1>
+          <form v-on:submit.prevent="fetchUserData">
+            <button type="submit">Refresh</button>
+          </form>
+          <p>{{ person.name.first }} {{ person.name.last }}</p>
+          <p>{{ prettyBirthday }}</p>
+          <p><a v-bind:href="'mailto:'+person.email">{{ person.email }}</a></p>
+          <p>{{ person }}</p>
+          
+          <ul v-for="row in offers">
+            <li>{{ row.name }} - {{row.salary}}</li>
+          </ul>
+        </div>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+
 
 
 
