@@ -1,3 +1,4 @@
+
 const Offer = {
     data() {
       return {
@@ -24,16 +25,13 @@ const Offer = {
     },
     computed: {
         prettyBirthday() {
-            return 'foo'
+            return dayjs(this.person.dob.date)
+            .format('D MMM YYYY')
         }
     },
-    created() {
-        console.log("A");
-        alert("Loaded");
-        this.fetchUser();
-    }, //end created
     methods: {
-        fetchUser() {
+        fetchUserData() {
+            console.log("A");
             fetch('https://randomuser.me/api/')
             .then( response => response.json() )
             .then( (responseJson) => {
@@ -45,14 +43,11 @@ const Offer = {
                 console.error(err);
             })
             console.log("B");
-        },
-
-        onRefresh(event) {
-            //event.preventDefault();
-            this.fetchUser();
         }
-
-    }
+    },
+    created() {
+        this.fetchUserData();
+    } //end created
 } // end Offer config
   
 Vue.createApp(Offer).mount('#offerApp');
