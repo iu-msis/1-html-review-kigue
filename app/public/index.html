@@ -115,8 +115,10 @@ padding: 20px;
           <form v-on:submit.prevent="fetchUserData">
             <button type="submit">Refresh</button>
           </form>
+          <p> <img v-bind:src="person.picture.large"></p>
           <p>
           <b>First Name:</b> {{ person.name.first }}
+          </p>
           <p>
           <p> 
           <b>Last Name:</b>{{ person.name.last }}
