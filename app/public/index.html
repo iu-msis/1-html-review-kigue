@@ -108,16 +108,33 @@ padding: 20px;
   <br>
   <b><u>Facts</u></b>: Barack Obama has served as a U.S Senator for the State of Illnois. In 2008, he was elected as the 44th President of the United States.
 </center>
+<hr>
   </div>
  <div id="offerApp" class="col col-8">
-          <h1>Two of two columns</h1>
+          <h1>Random User Simulation</h1>
           <form v-on:submit.prevent="fetchUserData">
             <button type="submit">Refresh</button>
           </form>
-          <p>{{ person.name.first }} {{ person.name.last }}</p>
-          <p>{{ prettyBirthday }}</p>
-          <p><a v-bind:href="'mailto:'+person.email">{{ person.email }}</a></p>
+          <p>
+          <b>First Name:</b> {{ person.name.first }}
+          <p>
+          <p> 
+          <b>Last Name:</b>{{ person.name.last }}
+          </p>
+          <p>
+          <b>Birtday:</b>
+          {{ prettyBirthday }}
+          </p>
+          <p>
+          <b>Age:</b> {{person.dob.age}}
+          <p>
+          <p>
+          <b>Country of Origin:</b> {{ person.location.country }}
+          </p>
+          <p>Email: <a v-bind:href="'mailto:'+person.email">{{ person.email }}</a></p>
           <p>{{ person }}</p>
+          {{person.picture.large}}
+
           
           <ul v-for="row in offers">
             <li>{{ row.name }} - {{row.salary}}</li>
@@ -134,4 +151,4 @@ padding: 20px;
 </body>
 </html>
 
-
+<htm>
