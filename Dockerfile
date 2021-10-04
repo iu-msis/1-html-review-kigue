@@ -2,7 +2,7 @@ FROM php:7.4-apache
 
 LABEL maintainer="Khaleel Igue"
 
-RUN docker-php-ext-install pdo-mysql
+RUN docker-php-ext-install pdo_mysql
 
 COPY app /srv/app
 
