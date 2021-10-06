@@ -29,20 +29,11 @@ CREATE TABLE GameDetails (
     GameLevel(255),
 );
 
-CREATE DATABASE IF NOT EXISTS msisdb;
-USE msisdb;
 
-DROP TABLE IF EXISTS student;
-CREATE TABLE student (
-    id int PRIMARY KEY AUTO_INCREMENT ,
-    username varchar(24) UNIQUE NOT NULL,
-    name varchar(48)
-);
-
-INSERT INTO student (id, username, name) VALUES 
-(1, 'tomgreg', 'Tom Gregory'),
-(2, 'beth1', 'Beth Barnhart'),
-(3, 'bipin', 'Prof. Prabhakar');
+INSERT INTO Game (gameid, gamedate, gametime, HomeTeam, AwayTeam, Field) VALUES 
+(1, '11-20-21','5:00', 'Bears', 'Lions', 'Soldier'),
+(2, '12-5-22', '6:00','Lions', 'Bears', 'Soldier'),
+(3, '9-8-21', '7:00', 'Cougars', 'Tigers','Memorial');
 
 -- SELECT * FROM students;
 
