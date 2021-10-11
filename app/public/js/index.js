@@ -2,25 +2,9 @@
 const Offer = {
     data() {
       return {
-        "person": {},
-        "offers": [
-                {
-                    "id": 1,
-                    "name": "Janet Doe",
-                    "salary": 120000,
-                    "bonus": 9000,
-                    "company":"EY",
-                    "offerDate": "2021-09-08"
-                },
-                {
-                    "id": 2,
-                    "name": "Jordan Doe",
-                    "salary": 80000,
-                    "bonus": 2000,
-                    "company":"IU",
-                    "offerDate": "2021-08-09"
-                }
-            ]
+        "students": [],
+        "selectedStudent": null,
+        "offers": []
         }
     },
     computed: {
@@ -45,6 +29,17 @@ const Offer = {
             console.log("B");
         }
     },
+          fetchStudentData() {
+          fetch('/api/student/')
+          .then( response => response.json() )
+          .then( (responseJson) => {
+              console.log(responseJson);
+              this.students = responseJson;
+          })
+          .catch( (err) => {
+              console.error(err);
+          })
+      },
     created() {
         this.fetchUserData();
     } //end created
