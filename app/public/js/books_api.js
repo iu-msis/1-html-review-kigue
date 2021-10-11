@@ -1,27 +1,20 @@
 
-const Offer = {
+const Books = {
     data() {
       return {
-        "students": [],
-        "selectedStudent": null,
-        "offers": []
+        "books":[]
         }
     },
-    computed: {
-        prettyBirthday() {
-            return dayjs(this.person.dob.date)
-            .format('D MMM YYYY')
-        }
-    },
+   
     methods: {
-        fetchUserData() {
+        fetchBookData() {
             console.log("A");
-            fetch('https://randomuser.me/api/')
+            fetch('api/books')
             .then( response => response.json() )
             .then( (responseJson) => {
                 console.log(responseJson);
                 console.log("C");
-                this.person = responseJson.results[0];
+                this.books = responseJson;
             })
             .catch( (err) => {
                 console.error(err);
@@ -29,35 +22,12 @@ const Offer = {
             console.log("B");
         }
     },
-          fetchStudentData() {
-          fetch('/api/student/')
-          .then( response => response.json() )
-          .then( (responseJson) => {
-              console.log(responseJson);
-              this.students = responseJson;
-          })
-          .catch( (err) => {
-              console.error(err);
-          })
-      },
-
-       fetchBookData() {
-            fetch('/api/books/')
-            .then( response => response.json() )
-            .then( (responseJson) => {
-                console.log(responseJson);
-                this.books = responseJson;
-            })
-            .catch( (err) => {
-                console.error(err);
-            })
-        },
 
         
     created() {
-        this.fetchUserData();
+        this.fetchBookData();
     } //end created
 } // end Offer config
   
-Vue.createApp(Offer).mount('#offerApp');
+Vue.createApp(Books).mount('#booksApp');
 console.log("Z");
