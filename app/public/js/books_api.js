@@ -2,7 +2,7 @@
 const Books = {
     data() {
       return {
-        "books":[]
+        "books":{}
         }
     },
    
@@ -30,4 +30,3 @@ const Books = {
 } // end Offer config
   
 Vue.createApp(Books).mount('#booksApp');
-console.log("Z");
