@@ -289,7 +289,7 @@ https://celebrityinsider.org/wp-content/uploads/2019/07/Barack-Obama-Donald-Trum
       </nav>
 
           
-    <div class="container-fluid" id="Books">
+    <div class="container-fluid" id="booksApp">
             <table class="table">
              <thead>
                 <tr>
@@ -305,42 +305,42 @@ https://celebrityinsider.org/wp-content/uploads/2019/07/Barack-Obama-Donald-Trum
                 <tbody>
                     <tr v-for="book in books">
                         <td>{{ book.id }}</td>
-                        <td>{{ book.Title }}</td>
-                        <td>{{ book.Author }}</td>
-                        <td>{{ book.Year Published }}</td>
-                        <td>{{ book.Published }}</td>
-                        <td>{{ book.Page Count }}</td>
-                        <td>{{ book.MSRP }}</td>
+                        <td>{{ book.title }}</td>
+                        <td>{{ book.author }}</td>
+                        <td>{{ book.year_pub }}</td>
+                        <td>{{ book.publisher }}</td>
+                        <td>{{ book.page_count }}</td>
+                        <td>{{ book.msrp }}</td>
 
                     </tr>
                 </tbody>
             </table>
 
-            <form v-on:submit.prevent="postNewOffer">
+            <form v-on:submit.prevent="postNewBook">
               <div class="mb-3">
                 <label for="companyName" class="form-label">Title</label>
-                <input type="text" v-model="offerForm.companyName"
+                <input type="text" v-model="bookForm.companyName"
                  class="form-control" id="companyName">
               </div>
               <div class="mb-3">
                 <label for="salary" class="form-label">Author</label>
-                <input type="number" v-model="offerForm.salary" class="form-control" id="salary">
+                <input type="number" v-model="bookForm.salary" class="form-control" id="salary">
               </div>
               <div class="mb-3">
                 <label for="bonus" class="form-label">Year Published</label>
-                <input type="number" v-model="offerForm.bonus" class="form-control" id="bonus">
+                <input type="number" v-model="bookForm.bonus" class="form-control" id="bonus">
               </div>
                <div class="mb-3">
                 <label for="bonus" class="form-label">Publisher</label>
-                <input type="number" v-model="offerForm.bonus" class="form-control" id="bonus">
+                <input type="number" v-model="bookForm.bonus" class="form-control" id="bonus">
               </div>
                <div class="mb-3">
                 <label for="bonus" class="form-label">Page Count</label>
-                <input type="number" v-model="offerForm.bonus" class="form-control" id="bonus">
+                <input type="number" v-model="bookForm.bonus" class="form-control" id="bonus">
               </div>
               <div class="mb-3">
                 <label for="offerDate" class="form-label">MSRP</label>
-                <input type="date" v-model="offerForm.offerDate" class="form-control" id="offerDate">
+                <input type="date" v-model="bookForm.offerDate" class="form-control" id="offerDate">
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
