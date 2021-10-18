@@ -318,29 +318,34 @@ https://celebrityinsider.org/wp-content/uploads/2019/07/Barack-Obama-Donald-Trum
 
             <form v-on:submit.prevent="postNewBook">
               <div class="mb-3">
-                <label for="companyName" class="form-label">Title</label>
-                <input type="text" v-model="bookForm.companyName"
-                 class="form-control" id="companyName">
+                <label for="bookid" class="form-label">Book ID</label>
+                <input type="text" v-model="bookForm.bookid"
+                 class="form-control" id="bookid">
               </div>
               <div class="mb-3">
-                <label for="salary" class="form-label">Author</label>
-                <input type="number" v-model="bookForm.salary" class="form-control" id="salary">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" v-model="bookForm.title"
+                 class="form-control" id="title">
               </div>
               <div class="mb-3">
-                <label for="bonus" class="form-label">Year Published</label>
-                <input type="number" v-model="bookForm.bonus" class="form-control" id="bonus">
+                <label for="author" class="form-label">Author</label>
+                <input type="text" v-model="bookForm.author" class="form-control" id="author">
+              </div>
+              <div class="mb-3">
+                <label for="year_pub" class="form-label">Year Published</label>
+                <input type="number" v-model="bookForm.year_pub" class="form-control" id="year_pub">
               </div>
                <div class="mb-3">
-                <label for="bonus" class="form-label">Publisher</label>
-                <input type="number" v-model="bookForm.bonus" class="form-control" id="bonus">
+                <label for="publisher" class="form-label">Publisher</label>
+                <input type="text" v-model="bookForm.publisher" class="form-control" id="publisher">
               </div>
                <div class="mb-3">
-                <label for="bonus" class="form-label">Page Count</label>
-                <input type="number" v-model="bookForm.bonus" class="form-control" id="bonus">
+                <label for="page_count" class="form-label">Page Count</label>
+                <input type="number" v-model="bookForm.page_count" class="form-control" id="page_count">
               </div>
               <div class="mb-3">
-                <label for="offerDate" class="form-label">MSRP</label>
-                <input type="date" v-model="bookForm.offerDate" class="form-control" id="offerDate">
+                <label for="msrp" class="form-label">MSRP</label>
+                <input type="text" v-model="bookForm.msrp" class="form-control" id="msrp">
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
