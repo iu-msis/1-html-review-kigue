@@ -40,10 +40,19 @@ const Books = {
         //     this.offers = json;
             
         //     // reset the form
+                this.resetOfferForm();
         //     this.offerForm = {};
         //   });
       },
     },
+    handleEdit(book) {
+        this.selectOffer = o;
+        this.offerForm = this.selectOffer;
+    },
+    resetOfferForm() {
+        this.selectOffer = null;
+        this.offerForm = {}:
+    }
 
 
         
