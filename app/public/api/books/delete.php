@@ -32,11 +32,6 @@ $db = DbConnection::getConnection();
 // Note the use of parameterized statements to avoid injection
 $stmt = $db->prepare(
   'DELETE FROM books WHERE id= ?'
-    title = ?,
-    salary = ?,
-    bonus = ?,
-    offerDate = ?
-  WHERE id = ?'
 );
 
 $stmt->execute([
@@ -55,5 +50,5 @@ $stmt->execute([
 // Step 4: Output
 // Here, instead of giving output, I'm redirecting to the SELECT API,
 // just in case the data changed by entering it
-header('HTTP/1.1 303 See Other');
-header('Location: ../offer/?student=' . $_POST['studentId']);
+// header('HTTP/1.1 303 See Other');
+// header('Location: ../offer/?student=' . $_POST['studentId']);
