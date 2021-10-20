@@ -1,11 +1,16 @@
+CREATE DATABASE IF NOT EXISTS msisdb;
+USE msisdb;
+
+DROP TABLE IF EXISTS books;
+
 create table books (
-	id INT,
+	id int primary key AUTO_INCREMENT,
 	title VARCHAR(50),
 	author VARCHAR(50),
 	year_pub VARCHAR(50),
 	publisher VARCHAR(50),
 	page_count INT,
-	MSRP VARCHAR(50)
+	msrp VARCHAR(50)
 );
 insert into books (id, title, author, year_pub, publisher, page_count, MSRP) values (1, 'Bel Ami', 'Mala Smallpeace', 2008, 'Ziemann Group', 262, '$2.55');
 insert into books (id, title, author, year_pub, publisher, page_count, MSRP) values (2, 'Rugrats Movie, The', 'Wrennie Pennetta', 2004, 'Hintz-Jast', 738, '$1.45');
