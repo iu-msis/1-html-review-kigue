@@ -31,8 +31,8 @@ $db = DbConnection::getConnection();
 // Step 2: Create & run the query
 // Note the use of parameterized statements to avoid injection
 $stmt = $db->prepare(
-  'UPDATE offer SET
-    companyName = ?,
+  'DELETE FROM books WHERE id= ?'
+    title = ?,
     salary = ?,
     bonus = ?,
     offerDate = ?
@@ -40,11 +40,12 @@ $stmt = $db->prepare(
 );
 
 $stmt->execute([
-  $_POST['companyName'],
-  $_POST['salary'],
-  $_POST['bonus'],
-  $_POST['offerDate'],
-  $_POST['id'],
+  $_POST['title'],
+  $_POST['author'],
+  $_POST['year_pub'],
+  $_POST['publisher'],
+  $_POST['page_count'],
+  $_POST['msrp']
 ]);
 
 // Get auto-generated PK from DB
@@ -54,5 +55,5 @@ $stmt->execute([
 // Step 4: Output
 // Here, instead of giving output, I'm redirecting to the SELECT API,
 // just in case the data changed by entering it
-// header('HTTP/1.1 303 See Other');
-// header('Location: ../offer/?student=' . $_POST['studentId']);
+header('HTTP/1.1 303 See Other');
+header('Location: ../offer/?student=' . $_POST['studentId']);

@@ -30,26 +30,48 @@ const Books = {
     
 
         postNewBook(evt) {  
-        console.log("Posting:", this.bookForm);
-        alert("Posting!");
+            console.log("Create:", this.bookForm);
 
-        fetch('api/books/create_book.php', {
-            method:'POST',
-            body: JSON.stringify(this.bookForm),
-            headers: {
-              "Content-Type": "application/json; charset=utf-8"
-            }
-          })
-          .then( response => response.json() )
-          .then( json => {
-            console.log("Returned from post:", json);
-            // TODO: test a result was returned!
-            this.books = json;
-            this.bookForm ={};
-          });
+            fetch('api/books/create_book.php', {
+                method:'POST',
+                body: JSON.stringify(this.bookForm),
+                headers: {
+                  "Content-Type": "application/json; charset=utf-8"
+                }
+              })
+              .then( response => response.json() )
+              .then( json => {
+                console.log("Returned from post:", json);
+                // TODO: test a result was returned!
+                this.books = json;
+                this.bookForm ={};
+              });
       }
+
+      //   postDeleteBook(evt) {  
+      //       if (!confirm("Are you sure you want to delete the book"))        
+                
+
+      //       fetch('api/books/delete.php', {
+      //           method:'POST',
+      //           body: JSON.stringify(this.bookForm),
+      //           headers: {
+      //             "Content-Type": "application/json; charset=utf-8"
+      //           }
+      //         })
+      //         .then( response => response.json() )
+      //         .then( json => {
+      //           console.log("Returned from post:", json);
+      //           // TODO: test a result was returned!
+      //           this.books = json;
+      //           this.bookForm ={};
+      //     });
+      // }
+      
       
     },
+
+
     
 
 
