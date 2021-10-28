@@ -78,7 +78,7 @@ const Books = {
         }
         console.log("Delete!", o);
 
-        fetch('api/offer/delete.php', {
+        fetch('api/books/delete.php', {
             method:'POST',
             body: JSON.stringify(o),
             headers: {
@@ -103,28 +103,28 @@ const Books = {
           resetOfferForm() {
           this.selectedOffer = null;
           this.bookForm = {};
-      }
+      },
 
 
-      //   postDeleteBook(evt) {  
-      //       if (!confirm("Are you sure you want to delete the book"))        
+        postDeleteBook(evt) {  
+            if (!confirm("Are you sure you want to delete the book"))        
                 
 
-      //       fetch('api/books/delete.php', {
-      //           method:'POST',
-      //           body: JSON.stringify(this.bookForm),
-      //           headers: {
-      //             "Content-Type": "application/json; charset=utf-8"
-      //           }
-      //         })
-      //         .then( response => response.json() )
-      //         .then( json => {
-      //           console.log("Returned from post:", json);
-      //           // TODO: test a result was returned!
-      //           this.books = json;
-      //           this.bookForm ={};
-      //     });
-      // }
+            fetch('api/books/delete.php', {
+                method:'POST',
+                body: JSON.stringify(this.bookForm),
+                headers: {
+                  "Content-Type": "application/json; charset=utf-8"
+                }
+              })
+              .then( response => response.json() )
+              .then( json => {
+                console.log("Returned from post:", json);
+                // TODO: test a result was returned!
+                this.books = json;
+                this.bookForm ={};
+          });
+      },
       
       
     },

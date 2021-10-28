@@ -316,7 +316,7 @@ https://celebrityinsider.org/wp-content/uploads/2019/07/Barack-Obama-Donald-Trum
                             class="btn btn-outline-secondary btn-sm"
                             v-on:click="selectBookToEdit(book)">Edit</button>
                           <button type="button" class="btn btn-outline-secondary btn-sm"
-                            v-on:click="postBookOffer(book)">Delete</button>
+                            v-on:click="postDeleteOffer(book)">Delete</button>
                         </td>
 
                     </tr>
@@ -326,11 +326,6 @@ https://celebrityinsider.org/wp-content/uploads/2019/07/Barack-Obama-Donald-Trum
             <h3>{{ selectedOffer === null ? "Add " : "Edit " }} Offer</h3>
 
             <form v-on:submit.prevent="postNewBook">
-             <!--  <div class="mb-3">
-                <label for="bookid" class="form-label">Book ID</label>
-                <input type="text" v-model="bookForm.bookid"
-                 class="form-control" id="bookid">
-              </div> -->
               <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" v-model="bookForm.title"
