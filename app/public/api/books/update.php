@@ -32,19 +32,23 @@ $db = DbConnection::getConnection();
 // Note the use of parameterized statements to avoid injection
 $stmt = $db->prepare(
   'UPDATE offer SET
-    companyName = ?,
-    salary = ?,
-    bonus = ?,
-    offerDate = ?
+    title = ?,
+    author = ?,
+    year_pub = ?,
+    publisher = ?,
+    page_count = ?,
+    msrp = ?
   WHERE id = ?'
 );
 
 $stmt->execute([
-  $_POST['companyName'],
-  $_POST['salary'],
-  $_POST['bonus'],
-  $_POST['offerDate'],
-  $_POST['id'],
+  $_POST['title'],
+  $_POST['author'],
+  $_POST['year_pub'],
+  $_POST['publisher'],
+  $_POST['page_count'],
+  $_POST['msrp']
+  $_POST['id']
 ]);
 
 // Get auto-generated PK from DB
