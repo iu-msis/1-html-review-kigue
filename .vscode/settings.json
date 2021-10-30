@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/527077f0-c757-4df4-ab2d-303030bd98f1/resourceGroups/resource_group/providers/Microsoft.Web/sites/kigue",
+    "appService.deploySubpath": "."
+}
