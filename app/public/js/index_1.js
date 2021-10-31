@@ -170,7 +170,7 @@ const Books = {
 
         // console.log("Creating!", this.offerForm);
 
-        fetch('api/offer/create_book.php', {
+        fetch('api/books/create_book.php', {
             method:'POST',
             body: JSON.stringify(this.bookForm),
             headers: {
